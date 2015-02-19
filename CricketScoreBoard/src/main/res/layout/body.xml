@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/details_background">
+
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Score: "
+        android:singleLine="true"
+        android:id="@+id/firstTeam"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:id="@+id/score"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/firstTeam" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="Over: "
+        android:id="@+id/over"
+        android:layout_below="@+id/firstTeam"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="Target: "
+        android:id="@+id/target"
+        android:layout_below="@+id/over"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="Player on Facing:"
+        android:id="@+id/firstPlayer"
+        android:layout_below="@+id/target"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="second player"
+        android:id="@+id/secondPlayer"
+        android:layout_below="@+id/firstPlayer"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="Bowler:"
+        android:id="@+id/bowler"
+        android:layout_below="@+id/secondPlayer"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="CRR:"
+        android:id="@+id/currentRunRate"
+        android:layout_below="@+id/bowler"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="RRR:"
+        android:id="@+id/requiredRunRate"
+        android:layout_below="@+id/currentRunRate"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:singleLine="true"
+        android:text="Required Score Stats:"
+        android:id="@+id/requiredScoreStats"
+        android:layout_below="@+id/requiredRunRate"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

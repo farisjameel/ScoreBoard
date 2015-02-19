@@ -1,0 +1,1 @@
+E:\android-studio\Projects\example\standOutExample\build\intermediates\classes\test\debug
