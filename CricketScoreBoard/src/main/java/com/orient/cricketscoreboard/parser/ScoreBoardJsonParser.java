@@ -10,9 +10,9 @@ import org.json.JSONObject;
  */
 public class ScoreBoardJsonParser {
 
-    private ScoreBoardModel scoreModel = null;
 
     public ScoreBoardModel getScoreModel(String jsonString){
+        ScoreBoardModel scoreModel = null;
             try {
                 JSONObject jsonObject = new JSONObject(jsonString);
                 scoreModel = new ScoreBoardModel();

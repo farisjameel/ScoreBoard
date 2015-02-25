@@ -4,23 +4,33 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <!-- GCM connects to Internet Services. -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
     <permission
         android:name="com.orient.cricketscoreboard.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.orient.cricketscoreboard.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission to vibrate -->
+
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
-        android:name=".application.ScoreBoardApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
@@ -35,57 +45,22 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.parse.PushService" />
-
-         <receiver android:name="com.parse.ParseBroadcastReceiver">
-         <intent-filter>
-         <action android:name="android.intent.action.BOOT_COMPLETED" />
-         <action android:name="android.intent.action.USER_PRESENT" />
-         </intent-filter>
-         </receiver>
-        <receiver android:name=".receiver.MyReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.USER_PRESENT" />
-                <action android:name="com.parse.push.intent.RECEIVE" />
-                <action android:name="com.parse.push.intent.DELETE" />
-                <action android:name="com.parse.push.intent.OPEN" />
-            </intent-filter>
-        </receiver>
 
         <receiver
-            android:name=".receiver.GCMReceiver"
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
+
+                <!-- Receives the actual messages. -->
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-
-                <!--
-                  IMPORTANT: If you change the package name of this sample app,
-                  change "com.parse.tutorials.pushnotifications" in the lines
-                  below to match the new package name.
-                -->
-                <category android:name="com.orient.cricketscoreboard.receiver" />
+                <category android:name="com.orient.cricketscoreboard" />
             </intent-filter>
         </receiver>
 
-
-         <!--<receiver android:name="com.parse.GcmBroadcastReceiver"-->
-         <!--android:permission="com.google.android.c2dm.permission.SEND">-->
-         <!--<intent-filter>-->
-         <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
-         <!--<action android:name="com.google.android.c2dm.intent.REGISTRATION" />-->
-
-
-         <!---->
-         <!--IMPORTANT: If you change the package name of this sample app,-->
-         <!--change "com.parse.tutorials.pushnotifications" in the lines-->
-         <!--below to match the new package name.-->
-         <!---->-->
-         <!--<category android:name="com.orient.cricketscoreboard" />-->
-         <!--</intent-filter>-->
-         <!--</receiver>-->
+        <service android:name="GCMIntentService" />
 
         <service android:name=".scoreboard.DataSender"/>
         <service android:name=".scoreboard.ScoreBoard" />

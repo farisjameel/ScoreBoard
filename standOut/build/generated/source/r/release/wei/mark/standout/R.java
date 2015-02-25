@@ -12,14 +12,16 @@ public final class R {
     }
     public static final class drawable {
         public static int border=0x7f020000;
-        public static int border_focused=0x7f020001;
-        public static int close=0x7f020002;
-        public static int corner=0x7f020003;
-        public static int gradient_background=0x7f020004;
-        public static int gradient_titlebar=0x7f020005;
-        public static int help=0x7f020006;
-        public static int hide=0x7f020007;
-        public static int maximize=0x7f020008;
+        public static int border1=0x7f020001;
+        public static int border_focused=0x7f020002;
+        public static int border_focused1=0x7f020003;
+        public static int close=0x7f020004;
+        public static int corner=0x7f020005;
+        public static int gradient_background=0x7f020006;
+        public static int gradient_titlebar=0x7f020007;
+        public static int help=0x7f020008;
+        public static int hide=0x7f020009;
+        public static int maximize=0x7f02000a;
     }
     public static final class id {
         public static int body=0x7f05000a;

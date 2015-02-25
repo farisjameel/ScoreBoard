@@ -21,4 +21,5 @@ android {
 dependencies {
     compile project(':standOut')
     compile files('libs/Parse-1.4.3.jar')
+    compile files('libs/gcm.jar')
 }

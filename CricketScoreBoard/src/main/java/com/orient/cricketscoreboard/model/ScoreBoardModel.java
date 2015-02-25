@@ -16,6 +16,10 @@ public class ScoreBoardModel {
     private String requiredRuns;
     private String remainingBalls;
 
+    /**
+     * getter setter
+     */
+
     public String getRemainingBalls() {
         return remainingBalls;
     }

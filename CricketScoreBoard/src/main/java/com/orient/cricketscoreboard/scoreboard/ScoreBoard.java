@@ -1,5 +1,6 @@
 package com.orient.cricketscoreboard.scoreboard;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -154,7 +155,30 @@ public class ScoreBoard extends StandOutWindow {
 	@Override
 	public List<DropDownListItem> getDropDownItems(int id) {
 
-		return null;
+        List<DropDownListItem> items = new ArrayList<DropDownListItem>();
+        items.add(new DropDownListItem(android.R.drawable.ic_menu_help,
+                "About", new Runnable() {
+
+            @Override
+            public void run() {
+                Toast.makeText(
+                        ScoreBoard.this,
+                        getAppName()
+                                + " is a demonstration of StandOut.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        }));
+        items.add(new DropDownListItem(android.R.drawable.ic_menu_preferences,
+                "Settings", new Runnable() {
+
+            @Override
+            public void run() {
+                Toast.makeText(ScoreBoard.this,
+                        "There are no settings.", Toast.LENGTH_SHORT)
+                        .show();
+            }
+        }));
+        return items;
 	}
 
 	@Override
@@ -179,7 +203,7 @@ public class ScoreBoard extends StandOutWindow {
 
 
 
-                if(scoreBoardModel!=null||scoreBoardModel.getFirstTeam()==null) {
+                if(scoreBoardModel!=null) {
 //                    TextView status = (TextView) window.findViewById(R.id.score);
 //                    status.setTextSize(20);
 //                    status.setText("score: scoreBoardModel.getScore()");

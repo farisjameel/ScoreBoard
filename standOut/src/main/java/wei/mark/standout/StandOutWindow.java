@@ -1558,10 +1558,10 @@ public abstract class StandOutWindow extends Service {
 	public final void setIcon(int id, int drawableRes) {
 		Window window = getWindow(id);
 		if (window != null) {
-//			View icon = window.findViewById(R.id.window_icon);
-//			if (icon instanceof ImageView) {
-//				((ImageView) icon).setImageResource(drawableRes);
-//			}
+			View icon = window.findViewById(R.id.window_icon);
+			if (icon instanceof ImageView) {
+				((ImageView) icon).setImageResource(drawableRes);
+			}
 		}
 	}
 

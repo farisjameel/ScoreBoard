@@ -2,17 +2,17 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Faris\AndroidStudioProjects\ScoreBoard\CricketScoreBoard\libs\Parse-1.4.3.jar"
+        jar="C:\Users\Faris\AndroidStudioProjects\ScoreBoard\CricketScoreBoard\libs\gcm.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="8daf146aea8cd5245bb90f802f2cd4b8dd855eca">
-        <dex dex="C:\Users\Faris\AndroidStudioProjects\ScoreBoard\CricketScoreBoard\build\intermediates\pre-dexed\debug\Parse-1.4.3-2928c0d2473adbe3597cb157cd3948893a4778d2.jar" />
+        sha1="a6d7bce795a14c7f86111756c4ceb44b79de14aa">
+        <dex dex="C:\Users\Faris\AndroidStudioProjects\ScoreBoard\CricketScoreBoard\build\intermediates\pre-dexed\debug\gcm-305d291142d506307d9c1bf5af08d6f8f0761182.jar" />
     </item>
     <item
         jar="C:\Users\Faris\AndroidStudioProjects\ScoreBoard\CricketScoreBoard\build\intermediates\exploded-aar\ScoreBoard\standOut\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="829aeb9e594aac24bf035517749fcbda861025ee">
+        sha1="43f6b11b59787494eb565763ed293539a1a5caa6">
         <dex dex="C:\Users\Faris\AndroidStudioProjects\ScoreBoard\CricketScoreBoard\build\intermediates\pre-dexed\debug\classes-de8afac6c4713d4c1bc797b47298acde96d60774.jar" />
     </item>
 
